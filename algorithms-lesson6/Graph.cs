@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 
 namespace algorithms_lesson6
@@ -17,5 +18,19 @@ namespace algorithms_lesson6
     }
     class Graph
     {
+        public List<Node> Nodes = new List<Node>();
+        public List<Edge> Edges = new List<Edge>();        
+
+        public Node AddNode(int data)
+        {
+            if (ContainsNode(data))
+                throw new InvalidOperationException("Vertex with same data is already in graph.");
+
+            var node = new Node();
+            Nodes.Add(node);
+            return node;
+        }
+
+        public bool ContainsNode(int data) => Nodes.Any(x => x.Value.Equals(data));
     }
 }
