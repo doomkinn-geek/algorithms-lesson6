@@ -20,11 +20,11 @@ namespace algorithms_lesson6
             var e1 = graph.AddEdge(n2);
             var e2 = graph.AddEdge(n3);
             var e3 = graph.AddEdge(n4);
-            var e4 = graph.AddEdge(null);
-            var e5 = graph.AddEdge(n7);
-            var e6 = graph.AddEdge(null);
-            var e7 = graph.AddEdge(null);
-            var e8 = graph.AddEdge(null);
+            var e4 = graph.AddEdge(n5);
+            var e5 = graph.AddEdge(n6);
+            var e6 = graph.AddEdge(n7);
+            var e7 = graph.AddEdge(n8);
+            var e8 = graph.AddEdge(n9);
 
             n1.Edges.Add(e1);
             n1.Edges.Add(e2);
