@@ -24,7 +24,7 @@ namespace algorithms_lesson6
         public Node AddNode(int data)
         {
             if (ContainsNode(data))
-                throw new InvalidOperationException("Vertex with same data is already in graph.");
+                throw new InvalidOperationException("Вершина с таким значением уже существует");
 
             var node = new Node();
             Nodes.Add(node);
