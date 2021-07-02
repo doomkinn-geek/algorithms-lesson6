@@ -106,7 +106,7 @@ namespace algorithms_lesson6
 
         public void DFS(Node root)
         {
-            /*if (root == null)
+            if (root == null)
                 return;
 
             Stack<Node> stack = new Stack<Node>();
@@ -114,13 +114,16 @@ namespace algorithms_lesson6
             while (stack.Count > 0)
             {
                 Node node = stack.Pop();
-                Console.WriteLine(node.Data);
-
-                if (node.Right != null)
-                    stack.Push(node.Right);
-                if (node.Left != null)
-                    stack.Push(node.Left);
-            }*/
+                if (node != null)
+                {
+                    Console.WriteLine(node.Value);
+                    for(int i = node.Edges.Count-1; i >= 0; i--)
+                    {
+                        if (node.Edges[i] != null)
+                            stack.Push(node.Edges[i].Node);
+                    }
+                }
+            }
         }
     }
 }

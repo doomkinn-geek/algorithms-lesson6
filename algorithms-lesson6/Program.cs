@@ -35,7 +35,16 @@ namespace algorithms_lesson6
             n4.Edges.Add(e7);
             n4.Edges.Add(e8);
 
+            Console.WriteLine("BFS:");
+            Console.WriteLine(new string('=', 40));
             graph.BFS(n1);
+            Console.WriteLine(new string('=', 40));
+            Console.WriteLine("DFS:");
+            Console.WriteLine(new string('=', 40));
+            graph.DFS(n1);
+            Console.WriteLine(new string('=', 40));
+
+            Console.ReadLine();
         }
     }
 }
